@@ -37,9 +37,9 @@ const RightSideNav = ({ children }) => {
       <div className="p-4 mb-4 bg-gray-200">
         <h2 className="text-2xl font-bold mb-3">Q-Zone</h2>
         <div>
-          <img className="mb-4 w-full" src="./assets/qZone1.png" alt="" />
-          <img className="mb-4 w-full" src="./assets/qZone2.png" alt="" />
-          <img className="mb-4 w-full" src="./assets/qZone3.png" alt="" />
+          <img className="mb-4 w-full" src="/assets/qZone1.png" alt="" />
+          <img className="mb-4 w-full" src="/assets/qZone2.png" alt="" />
+          <img className="mb-4 w-full" src="/assets/qZone3.png" alt="" />
         </div>
       </div>
       <div className="mb-4">{children}</div>

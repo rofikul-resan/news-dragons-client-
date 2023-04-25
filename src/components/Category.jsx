@@ -17,9 +17,9 @@ const Category = () => {
           <NavLink
             key={category.id}
             className={({ isActive }) =>
-              isActive ? "bg-gray-300 text-gray-800  p-3 " : "p-3"
+              isActive ? "bg-gray-300 text-gray-800  p-3 rounded-md " : "p-3"
             }
-            to={`/category/${category.id}`}
+            to={`/news-category/${category.id}`}
           >
             {category.name}
           </NavLink>

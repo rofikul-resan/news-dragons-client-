@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <div className="mx-auto w-fit text-center mt-12">
-        <img className="w-full" src="./assets/logo.png" alt="" />
+        <img className="w-full" src="/assets/logo.png" alt="" />
         <p className="mt-5">Journalism Without Fear or Favour</p>
         <p className="text-sm mt-2">{moment().format("dddd, MMMM D , YYYY")}</p>
       </div>

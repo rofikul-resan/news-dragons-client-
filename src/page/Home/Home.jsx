@@ -1,4 +1,5 @@
 // import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import AdsComponents from "../../components/AdsComponents";
 import Category from "../../components/Category";
 import Header from "../../components/Header";
@@ -10,7 +11,7 @@ const Home = () => {
       <Header />
       <div className="home-layout gap-8">
         <Category />
-        <div> this is model</div>
+        <Outlet />
         <RightSideNav>
           <AdsComponents />
         </RightSideNav>
