@@ -6,3 +6,11 @@
   display: grid;
   grid-template-columns: 1fr 2.5fr 1fr;
 }
+
+.news-scroll::-webkit-scrollbar {
+  display: none;
+}
+.news-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

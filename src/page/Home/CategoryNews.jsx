@@ -5,7 +5,7 @@ const CategoryNews = () => {
   const newsData = useLoaderData();
 
   return (
-    <div>
+    <div className="overflow-scroll news-scroll h-[1525px]">
       {newsData.map((news) => (
         <NewsCardShort key={news._id} news={news}></NewsCardShort>
       ))}
