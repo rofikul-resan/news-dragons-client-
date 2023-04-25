@@ -1,5 +1,6 @@
 // import { Outlet } from "react-router-dom";
 import AdsComponents from "../../components/AdsComponents";
+import Category from "../../components/Category";
 import Header from "../../components/Header";
 import RightSideNav from "../../components/RightSideNav";
 
@@ -8,7 +9,7 @@ const Home = () => {
     <div className="w-10/12 mx-auto ">
       <Header />
       <div className="home-layout gap-8">
-        <div> this is left side </div>
+        <Category />
         <div> this is model</div>
         <RightSideNav>
           <AdsComponents />
