@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const NewsCardShort = ({ news }) => {
-  const { author, details, image_url, title, total_view, rating } = news;
+  const { _id, author, details, image_url, title, total_view, rating } = news;
   return (
     <div className="border-2 mb-5 rounded-md">
       {/* header  of card  */}
@@ -38,7 +38,10 @@ const NewsCardShort = ({ news }) => {
         {details.length >= 240 ? (
           <p>
             {details.slice(0, 240)}{" "}
-            <Link to={""} className="ml-2 text-orange-400 font-semibold">
+            <Link
+              to={`/news/${_id}`}
+              className="ml-2 text-orange-400 font-semibold"
+            >
               Read More....
             </Link>{" "}
           </p>

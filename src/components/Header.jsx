@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <nav className="w-1/2 ml-auto flex justify-between items-center mb-8">
         <div className=" flex  gap-3 font-semibold ">
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/career">Career</Link>
         </div>
