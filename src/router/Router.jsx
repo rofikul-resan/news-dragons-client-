@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <CategoryNews></CategoryNews>,
-        loader: () => fetch(`http://127.0.0.1:5000/news-category/0`),
+        loader: () => fetch("http://127.0.0.1:5000/news"),
       },
       {
         path: "/news-category/:id",
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <NewsCardFull></NewsCardFull>,
-        // loader: ({ params }) =>
-        //   fetch(`http://127.0.0.1:5000/news/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://127.0.0.1:5000/news/${params.id}`),
       },
     ],
   },

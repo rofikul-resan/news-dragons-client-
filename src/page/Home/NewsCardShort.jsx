@@ -1,4 +1,5 @@
 import moment from "moment";
+import { useEffect, useState } from "react";
 import {
   BsBookmarkCheck,
   BsFillEyeFill,
@@ -20,7 +21,7 @@ const NewsCardShort = ({ news }) => {
         <div className="flex justify-between items-center px-4  flex-1">
           <div>
             <h4 className="font-semibold text-xl  mb-3">{author?.name}</h4>
-            <p>{moment(author.published_date).format("YYYY-MM-D")}</p>
+            <p>{moment(author?.published_date).format("YYYY-MM-D")}</p>
           </div>
           <div className="flex gap-4 text-2xl items-center">
             <BsBookmarkCheck />
