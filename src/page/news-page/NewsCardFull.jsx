@@ -1,5 +1,6 @@
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useLoaderData } from "react-router-dom";
+import EditorInsight from "./EditorInsight";
 
 const NewsCardFull = () => {
   const news = useLoaderData();
@@ -29,6 +30,7 @@ const NewsCardFull = () => {
           </Link>
         </div>
       </div>
+      <EditorInsight />
     </div>
   );
 };

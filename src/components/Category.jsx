@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiOutlineCalendar } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const Category = () => {
@@ -24,6 +25,41 @@ const Category = () => {
             {category.name}
           </NavLink>
         ))}
+      </div>
+      <div className="grid gap-4 mb-10 mt-6 ">
+        {/* single  card */}
+        <div className="border p-2">
+          <img className="w-full " src="/assets/1.png" alt="" />
+          <h1 className="text-xl mb-3 font-bold">
+            21 The Most Stylish Wedding Guest Dresses For Spring
+          </h1>
+          <div className="flex items-center text-gray-400">
+            <AiOutlineCalendar />
+            <p>Jan 4, 2022</p>
+          </div>
+        </div>
+        {/* single  card */}
+        <div className="border p-2">
+          <img src="/assets/2.png" alt="" />
+          <h1 className="text-xl mb-3 font-bold">
+            21 The Most Stylish Wedding Guest Dresses For Spring
+          </h1>
+          <div className="flex items-center text-gray-400 gap-3">
+            <AiOutlineCalendar />
+            <p>Jan 4, 2022</p>
+          </div>
+        </div>
+        {/* single  card */}
+        <div className="border p-2">
+          <img src="/assets/3.png" alt="" />
+          <h1 className="text-xl mb-3 font-bold">
+            21 The Most Stylish Wedding Guest Dresses For Spring
+          </h1>
+          <div className="flex items-center text-gray-400">
+            <AiOutlineCalendar />
+            <p>Jan 4, 2022</p>
+          </div>
+        </div>
       </div>
     </div>
   );
