@@ -1,5 +1,4 @@
 import moment from "moment";
-import { useEffect, useState } from "react";
 import {
   BsBookmarkCheck,
   BsFillEyeFill,
@@ -55,10 +54,11 @@ const NewsCardShort = ({ news }) => {
       <div className="text-xl p-5 flex justify-between">
         <div>
           <Rating
+            placeholderRating={rating.number}
             className="text-orange-500 mr-3 "
             emptySymbol={<BsStar className="mr-2" />}
             fullSymbol={<BsStarFill className="mr-2" />}
-            initialRating={rating.number}
+            placeholderSymbol={<BsStarFill className="mr-2" />}
             readonly
           />
           <span>{rating.number}</span>

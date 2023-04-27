@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import AdsComponents from "../../components/AdsComponents";
 import Header from "../../components/Header";
 import RightSideNav from "../../components/RightSideNav";
 
@@ -9,9 +8,7 @@ const NewsPage = () => {
       <Header />
       <div className="news-page-layout gap-8">
         <Outlet />
-        <RightSideNav>
-          <AdsComponents />
-        </RightSideNav>
+        <RightSideNav></RightSideNav>
       </div>
     </div>
   );
