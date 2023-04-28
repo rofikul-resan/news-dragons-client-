@@ -5,7 +5,6 @@ import EditorInsight from "./EditorInsight";
 const NewsCardFull = () => {
   const news = useLoaderData();
   const { details, image_url, title, category_id } = news;
-  console.log(news);
   return (
     <div>
       <h1 className="text-2xl font-bold mb-5">Dragon News</h1>

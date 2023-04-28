@@ -1,6 +1,27 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+  const location = useLocation();
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname;
+
+  const HandelLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password, form);
+    login(email, password)
+      .then(() => {
+        navigate(from);
+        form.reset();
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <div className="hero rounded-lg bg-white">
@@ -8,7 +29,7 @@ const Login = () => {
           <h1 className="text-5xl font-bold text-center mt-3 m-5">
             Login your account!
           </h1>
-          <form className="card-body">
+          <form onSubmit={HandelLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="text-xl font-bold">Email</span>

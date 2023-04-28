@@ -4,6 +4,7 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import firebaseApp from "../firebase/firebase.config";
 
@@ -12,23 +13,37 @@ const auth = getAuth(firebaseApp);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const updateUser = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        setLoading(false);
-      }
-    });
-    return () => updateUser();
-  }, []);
+  console.log(user);
+
+  // function for login
   const login = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  // function for sing up
   const singUp = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
+  //function for log out
+
+  const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  // load user
+  useEffect(() => {
+    const updateUser = onAuthStateChanged(auth, (loggedUser) => {
+      setUser(loggedUser);
+      setLoading(false);
+    });
+    return () => {
+      updateUser();
+    };
+  }, []);
 
   const authValue = {
     loading,
@@ -36,6 +51,7 @@ const AuthProvider = ({ children }) => {
     setUser,
     login,
     singUp,
+    logOut,
   };
   return (
     <AuthContext.Provider value={authValue}>{children}</AuthContext.Provider>

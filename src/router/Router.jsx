@@ -7,6 +7,7 @@ import NewsCardFull from "../page/news-page/NewsCardFull";
 import AuthPage from "../page/Auth/AuthPage";
 import Login from "../page/Auth/Login";
 import SingUp from "../page/Auth/SingUp";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/news",
-    element: <NewsPage></NewsPage>,
+    element: (
+      <PrivateRouter>
+        <NewsPage></NewsPage>
+      </PrivateRouter>
+    ),
     children: [
       {
         path: ":id",
