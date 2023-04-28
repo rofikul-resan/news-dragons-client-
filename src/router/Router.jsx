@@ -17,13 +17,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <CategoryNews></CategoryNews>,
-        loader: () => fetch("http://127.0.0.1:5000/news"),
+        loader: () =>
+          fetch(
+            " https://news-dragon-server-resan6231-gmailcom.vercel.app/news"
+          ),
       },
       {
         path: "/news-category/:id",
         element: <CategoryNews></CategoryNews>,
         loader: ({ params }) =>
-          fetch(`http://127.0.0.1:5000/news-category/${params.id}`),
+          fetch(
+            ` https://news-dragon-server-resan6231-gmailcom.vercel.app/news-category/${params.id}`
+          ),
       },
     ],
   },
@@ -39,7 +44,9 @@ const router = createBrowserRouter([
         path: ":id",
         element: <NewsCardFull></NewsCardFull>,
         loader: ({ params }) =>
-          fetch(`http://127.0.0.1:5000/news/${params.id}`),
+          fetch(
+            ` https://news-dragon-server-resan6231-gmailcom.vercel.app/news/${params.id}`
+          ),
       },
     ],
   },

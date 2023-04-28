@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Category = () => {
   const [categories, setCategory] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch(" https://news-dragon-server-resan6231-gmailcom.vercel.app/category")
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, []);
